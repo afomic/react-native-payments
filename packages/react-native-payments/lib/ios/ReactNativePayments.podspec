@@ -2,7 +2,7 @@ require "json"
 
 package = JSON.parse(File.read(File.join(__dir__, "../../package.json")))
 version = package["version"]
-giturl = package["repository"]
+giturl = package["repository"]["url"]
 
 Pod::Spec.new do |s|
   s.name         = "ReactNativePayments"
